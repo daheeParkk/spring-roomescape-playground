@@ -2,9 +2,7 @@ package roomescape.service;
 
 import static roomescape.exception.ExceptionMessage.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
 
@@ -17,8 +15,6 @@ import roomescape.repository.ReservationRepository;
 @Service
 public class ReservationService {
 
-    private final List<Reservation> reservations = new ArrayList<>();
-    private final AtomicLong index = new AtomicLong(0);
     private final ReservationRepository reservationRepository;
 
     public ReservationService(ReservationRepository reservationRepository) {
